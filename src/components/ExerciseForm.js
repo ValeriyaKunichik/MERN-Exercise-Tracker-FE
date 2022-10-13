@@ -21,7 +21,7 @@ const ExerciseForm = () => {
       body: JSON.stringify(exercise),
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
     })
     const json = await response.json()
 

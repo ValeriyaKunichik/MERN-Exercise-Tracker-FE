@@ -11,7 +11,7 @@ const Home = () => {
     const fetchExercises = async () => {
       const response = await fetch('https://exercises-api.onrender.com/', {
         method: 'GET',
-        mode: 'no-cors'
+        mode: 'no-cors',
       })
       const json = await response.json()
 
