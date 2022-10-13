@@ -6,7 +6,7 @@ const ExerciseDetails = ({ exercise }) => {
   const { dispatch } = useExercisesContext()
 
   const handleClick = async () => {
-    const response = await fetch('/api/exercises/' + exercise._id, {
+    const response = await fetch('https://exercises-api.onrender.com/' + exercise._id, {
       method: 'DELETE'
     })
     const json = await response.json()

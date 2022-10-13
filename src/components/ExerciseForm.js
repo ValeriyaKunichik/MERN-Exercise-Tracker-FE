@@ -15,7 +15,7 @@ const ExerciseForm = () => {
 
     const exercise = {title, duration, reps}
     
-    const response = await fetch('/api/exercises', {
+    const response = await fetch('https://exercises-api.onrender.com', {
       method: 'POST',
       body: JSON.stringify(exercise),
       headers: {
