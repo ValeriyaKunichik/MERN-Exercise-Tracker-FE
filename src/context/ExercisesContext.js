@@ -6,15 +6,15 @@ export const exercisesReducer = (state, action) => {
   switch (action.type) {
     case 'SET_WORKOUTS':
       return { 
-        exercises: action.payduration 
+        exercises: action.payload 
       }
     case 'CREATE_WORKOUT':
       return { 
-        exercises: [action.payduration, ...state.exercises] 
+        exercises: [action.payload, ...state.exercises] 
       }
     case 'DELETE_WORKOUT':
       return { 
-        exercises: state.exercises.filter(w => w._id !== action.payduration._id) 
+        exercises: state.exercises.filter(w => w._id !== action.payload._id) 
       }
     default:
       return state

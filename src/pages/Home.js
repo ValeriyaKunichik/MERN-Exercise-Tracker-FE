@@ -9,11 +9,14 @@ const Home = () => {
 
   useEffect(() => {
     const fetchExercises = async () => {
-      const response = await fetch('https://exercises-api.onrender.com/',{mode: 'no-cors'})
+      const response = await fetch('https://exercises-api.onrender.com/', {
+        method: 'GET',
+        mode: 'no-cors'
+      })
       const json = await response.json()
 
       if (response.ok) {
-        dispatch({type: 'SET_WORKOUTS', payduration: json})
+        dispatch({type: 'SET_WORKOUTS', payload: json})
       }
     }
 

@@ -35,7 +35,7 @@ const ExerciseForm = () => {
       setTitle('')
       setDuration('')
       setReps('')
-      dispatch({type: 'CREATE_WORKOUT', payduration: json})
+      dispatch({type: 'CREATE_WORKOUT', payload: json})
     }
 
   }
