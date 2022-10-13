@@ -17,6 +17,7 @@ const ExerciseForm = () => {
     
     const response = await fetch('https://exercises-api.onrender.com', {
       method: 'POST',
+      mode: 'no-cors',
       body: JSON.stringify(exercise),
       headers: {
         'Content-Type': 'application/json'

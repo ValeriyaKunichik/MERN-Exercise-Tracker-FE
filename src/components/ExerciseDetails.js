@@ -7,7 +7,8 @@ const ExerciseDetails = ({ exercise }) => {
 
   const handleClick = async () => {
     const response = await fetch('https://exercises-api.onrender.com/' + exercise._id, {
-      method: 'DELETE'
+      method: 'DELETE',
+      mode: 'no-cors'
     })
     const json = await response.json()
 
