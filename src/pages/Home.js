@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchExercises = async () => {
-      const response = await fetch('/')
+      const response = await fetch('https://exercises-api.onrender.com/')
       const json = await response.json()
 
       if (response.ok) {
